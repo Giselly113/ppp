@@ -1,0 +1,302 @@
+/* Geral */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #1443c5;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #f0e6ff;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1100px; 
+    margin: 10px auto; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: none; /* Esconde todas as imagens inicialmente */
+}
+
+.slider img.active {
+    display: block; /* Mostra apenas a imagem ativa */
+}
+
+.departamentos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.departamentos a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid #386dff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.departamentos a:hover {
+    background-color: #0931a0;
+    color: #fff;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra mais suave */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 1 1 calc(33.33% - 20px); /* 3 produtos por linha em telas grandes */
+    max-width: 300px; /* Limita a largura máxima dos produtos */
+    position: relative; /* Necessário para posicionar o desconto */
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    color: #000;
+    font-size: 1.25em;
+}
+
+.product .sub-price {
+    text-decoration: line-through;
+    color: #ad0404;
+}
+
+.product .price {
+    font-weight: 700;
+    color: #000;
+    margin: 5px 0;
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Mover para a direita */
+    background-color: #ad0404;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%; /* Tornando o fundo circular */
+    width: 40px; /* Largura do círculo */
+    height: 40px; /* Altura do círculo */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    font-weight: bold;
+    font-size: 0.9em; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.star {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px; /* Largura fixa para o campo de busca */
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #0099ffa9; /* Cor do botão buscar */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #0077cc; /* Cor ao passar o mouse */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; /* Espaço acima do rodapé */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.newsletter {
+    background-color: #172bdf;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: calc(100% - 130px);
+    margin-right: 10px;
+}
+
+.newsletter input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0099ffa9;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter input[type="submit"]:hover {
+    background-color: #2b2b2b;
+}
+
+/* Estilo do Botão Comprar */
+.buy-button {
+    padding: 10px 15px; /* Ajusta o tamanho do botão */
+    background-color: #0099ffa9; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border: 2px solid transparent; /* Borda transparente por padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    margin-top: 10px; /* Espaço acima do botão */
+    transition: background-color 0.3s, border-color 0.3s; /* Transição suave */
+}
+
+.buy-button:hover {
+    background-color: #0077cc; /* Cor ao passar o mouse */
+    border-color: #f0e6ff; /* Cor da borda ao passar o mouse */
+}
+
+/* Consultas de Mídia para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* 2 produtos por linha em telas médias */
+    }
+
+    .search-bar input {
+        width: calc(100% - 46px);
+    }
+
+    .newsletter input[type="email"] {
+        width: calc(100% - 120px);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .slider {
+        max-height: 200px;
+    }
+
+    .product {
+        flex: 1 1 calc(100% - 20px); /* 1 produto por linha em telas menores */
+        max-width: 100%; /* Remove o limite máximo para telas pequenas */
+        margin-bottom: 15px; /* Espaçamento inferior para melhor layout */
+    }
+}
